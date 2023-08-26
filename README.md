@@ -1,6 +1,8 @@
 # icecubesweb
 
-Experimental SwiftUI app for deployment on Vercel. 
+Demo: https://icecubesweb.vercel.app/trending
+
+Experimental SwiftUI app for deployment on Vercel.
 
 Using https://github.com/swift-cloud/VercelUI
 
@@ -8,7 +10,7 @@ If you have the vercel CLI configured you can try to link the project to a new V
 
 Run the project locally
 
-`swift package --disable-sandbox vercel dev`   
+`swift package --disable-sandbox vercel dev`
 
 Deploy the project on Vercel
 
