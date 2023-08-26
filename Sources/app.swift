@@ -6,6 +6,9 @@ struct TrendingPage: View {
   var body: some View {
     ScrollView {
       VStack(alignment: .leading) {
+        Text("Trends on Mastodon.social")
+          .font(.title)
+        
         ForEach(statuses) { status in
           VStack(alignment: .leading) {
             HStack {
@@ -14,8 +17,14 @@ struct TrendingPage: View {
                 .frame(width: 28, height: 28)
                 .cornerRadius(8)
               Text(status.account.username)
+                .font(.headline)
             }
             Text(status.content)
+            if let url = status.url {
+              Link("See more", destination: url)
+                .font(.footnote)
+                .foregroundColor(.blue)
+            }
           }
         }
       }
