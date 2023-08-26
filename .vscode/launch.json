@@ -1,0 +1,28 @@
+{
+    "configurations": [
+        {
+            "type": "lldb",
+            "request": "launch",
+            "sourceLanguages": [
+                "swift"
+            ],
+            "name": "Debug icecubesweb",
+            "program": "${workspaceFolder:icecubesweb}/.build/debug/icecubesweb",
+            "args": [],
+            "cwd": "${workspaceFolder:icecubesweb}",
+            "preLaunchTask": "swift: Build Debug icecubesweb"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "sourceLanguages": [
+                "swift"
+            ],
+            "name": "Release icecubesweb",
+            "program": "${workspaceFolder:icecubesweb}/.build/release/icecubesweb",
+            "args": [],
+            "cwd": "${workspaceFolder:icecubesweb}",
+            "preLaunchTask": "swift: Build Release icecubesweb"
+        }
+    ]
+}
