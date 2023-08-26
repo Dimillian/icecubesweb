@@ -7,7 +7,7 @@ let package = Package(
     name: "icecubesweb",
     platforms: [.macOS(.v13)],
     dependencies: [
-      .package(url: "https://github.com/swift-cloud/VercelUI", from: "1.0.0"),
+      .package(url: "https://github.com/swift-cloud/VercelUI", from: "1.1.0"),
     ],
     targets: [
         // Targets are the basic building blocks of a package, defining a module or a test suite.
