@@ -5,4 +5,5 @@ struct Status: Codable, Identifiable {
   let content: String
   let account: Account
   let url: URL?
+  let media_attachments: [MediaAttachment]
 }

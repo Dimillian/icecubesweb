@@ -11,15 +11,28 @@ struct TrendingPage: View {
         
         ForEach(statuses) { status in
           VStack(alignment: .leading) {
-            HStack {
+            HStack(alignment: .center) {
               Image(status.account.avatar.absoluteString)
                 .resizable()
                 .frame(width: 28, height: 28)
                 .cornerRadius(8)
               Text(status.account.username)
                 .font(.headline)
+              if let acct = status.account.acct {
+                Text(acct)
+                  .font(.footnote)
+                  .foregroundColor(.gray)
+              }
             }
-            Text(status.content)
+            
+            HTML("div", content: status.content)
+            
+            if let mediaURL = status.media_attachments.first?.url {
+              Image(mediaURL.absoluteString)
+                .resizable()
+                .frame(maxWidth: 400)
+            }
+             
             if let url = status.url {
               Link("See more", destination: url)
                 .font(.footnote)
